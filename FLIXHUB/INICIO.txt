@@ -1,0 +1,151 @@
+🎬 FLIXHUB - PLATAFORMA DE PELÍCULAS CON SASS
+===============================================
+
+📂 ESTRUCTURA DEL PROYECTO:
+
+scss/
+│
+├── 📄 index.html                 ← PÁGINA PRINCIPAL (abre en navegador)
+├── 📄 styles.css                 ← CSS COMPILADO (generado automáticamente)
+├── 📄 package.json               ← Configuración para compilar SASS
+├── 📄 README.md                  ← Documentación completa
+├── 📄 GUIA_RAPIDA.md            ← Guía de inicio rápido ⭐
+├── 📄 COMPILACION.scss           ← Cómo compilar SASS
+│
+├── 📁 abstracts/
+│   ├── variables.scss            ← Colores, fuentes, espacios
+│   └── mixins.scss               ← Funciones reutilizables
+│
+├── 📁 base/
+│   ├── reset.scss                ← Reset CSS global
+│   └── typography.scss           ← Tipografías
+│
+├── 📁 components/
+│   ├── buttons.scss              ← Estilos de botones
+│   └── cards.scss                ← Estilos de tarjetas
+│
+└── 📁 layout/
+    ├── header.scss               ← Encabezado y navegación
+    ├── footer.scss               ← Pie de página
+    └── main.scss                 ← Archivo principal (importa todo)
+
+
+🎯 INICIO RÁPIDO:
+================
+
+1. Abre index.html en tu navegador
+   → La página ya está funcional
+
+2. Si quieres editar estilos:
+   → Edita cualquier archivo .scss
+   → Compila con: sass layout/main.scss styles.css
+   → Recarga la página (F5)
+
+
+🎨 CARACTERÍSTICAS:
+===================
+
+✨ Dark mode estilo Netflix
+✨ Diseño responsive (Mobile, Tablet, Desktop)
+✨ Tarjetas de películas con efectos hover
+✨ Navegación sticky
+✨ Botones interactivos
+✨ Código modular y escalable
+
+
+🔧 VARIABLES PRINCIPALES:
+=========================
+
+Colores:
+  $color-primary:    #e50914   (Rojo Netflix)
+  $color-secondary:  #221f1f   (Negro)
+  $color-bg:         #141414   (Fondo oscuro)
+  $color-text:       #ffffff   (Texto blanco)
+  $color-accent:     #564d4d   (Gris)
+  $color-hover:      #f5531b   (Naranja)
+
+Espaciados:
+  $space-xs:  0.25rem
+  $space-sm:  0.5rem
+  $space-md:  1rem
+  $space-lg:  2rem
+  $space-xl:  3rem
+
+
+📝 CÓMO EDITAR:
+===============
+
+Cambiar colores:
+  ↓ Edita abstracts/variables.scss
+  ↓ Compila: sass layout/main.scss styles.css
+
+Cambiar botones:
+  ↓ Edita components/buttons.scss
+  ↓ Compila el archivo
+
+Cambiar tarjetas:
+  ↓ Edita components/cards.scss
+  ↓ Compila el archivo
+
+Añadir películas:
+  ↓ Edita index.html
+  ↓ Duplica un bloque .card
+
+
+⚙️ COMPILAR SASS:
+=================
+
+Opción 1: Node.js (Recomendado)
+  $ npm install -g sass
+  $ sass layout/main.scss styles.css
+  $ sass --watch . --output .    (modo watch)
+
+Opción 2: Online
+  https://jsoncrack.com/editor
+
+Opción 3: Visual Studio Code
+  → Instala extensión "Live Sass Compiler"
+  → Click en "Watch Sass"
+
+
+📖 DOCUMENTACIÓN:
+=================
+
+README.md          → Documentación completa
+GUIA_RAPIDA.md     → Guía de inicio ⭐
+COMPILACION.scss   → Información de compilación
+
+
+✅ ¿QUÉ INCLUYE?
+================
+
+✓ Página HTML lista para usar
+✓ Archivos SCSS organizados
+✓ CSS compilado
+✓ 6 películas de ejemplo
+✓ 3 series de ejemplo
+✓ Navegación completa
+✓ Footer con redes sociales
+✓ Responsive design
+✓ Documentación completa
+
+
+💡 TIPS:
+========
+
+• Mantén las variables centralizadas
+• Usa los mixins para código limpio
+• Sigue BEM para nombres de clases
+• La compilación es automática con --watch
+• Los cambios en SCSS necesitan recargar el navegador
+
+
+🚀 ¡LISTO PARA USAR!
+====================
+
+Abre index.html en tu navegador y verás la página completa.
+Para editar estilos, modifica los archivos .scss y compila.
+
+¿Dudas? Revisa README.md o GUIA_RAPIDA.md
+
+¡Disfruta creando! 🎉

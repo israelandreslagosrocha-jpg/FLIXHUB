@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as v;
+
+@use "../abstracts/mixins" as m;
+ 
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include m.transition;
+ 
+  &--primary {
+    background: v.$color-primary;
+    color: white;
+
+    @include m.button-hover;
+  }
+
+  &--secondary {
+    background: v.$color-secondary;
+    color: white;
+    border: 1px solid v.$color-primary;
+
+    @include m.button-hover;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid v.$color-primary;
+    color: v.$color-primary;
+
+    &:hover {
+      background: v.$color-primary;
+      color: white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+
+ 

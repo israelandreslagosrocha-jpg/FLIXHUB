@@ -1,0 +1,138 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+@use "base/reset";
+@use "base/typography";
+
+@use "layout/header";
+@use "layout/footer";
+
+@use "components/buttons";
+@use "components/cards";
+
+// Hero Section
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 600px;
+  @include m.flex-center;
+  flex-direction: column;
+  text-align: center;
+  padding: v.$space-xl;
+  position: relative;
+
+  @include m.responsive('tablet') {
+    min-height: 400px;
+    padding: v.$space-lg;
+  }
+
+  &__title {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: v.$space-md;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+    @include m.responsive('tablet') {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    color: v.$color-accent;
+    font-size: 1.3rem;
+    margin-bottom: v.$space-lg;
+    max-width: 500px;
+
+    @include m.responsive('tablet') {
+      font-size: 1rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: v.$space-md;
+    justify-content: center;
+
+    @include m.responsive('mobile') {
+      flex-direction: column;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$space-lg;
+
+  @include m.responsive('tablet') {
+    padding: 0 v.$space-md;
+  }
+}
+
+// Section
+.section {
+  padding: v.$space-xl 0;
+
+  @include m.responsive('tablet') {
+    padding: v.$space-lg 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: v.$space-xl;
+    color: white;
+    font-size: 2.5rem;
+
+    @include m.responsive('tablet') {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: v.$color-accent;
+    margin-bottom: v.$space-lg;
+    font-size: 1.1rem;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: v.$space-lg;
+
+  @include m.responsive('tablet') {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: v.$space-md;
+  }
+
+  @include m.responsive('mobile') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Utilities
+.u-text-center {
+  text-align: center;
+}
+
+.u-mt-lg {
+  margin-top: v.$space-lg;
+}
+
+.u-mb-lg {
+  margin-bottom: v.$space-lg;
+}
+
+.u-hidden-mobile {
+  @include m.responsive('mobile') {
+    display: none;
+  }
+}

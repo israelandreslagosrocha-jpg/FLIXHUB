@@ -1,0 +1,13 @@
+{
+  "name": "flixhub",
+  "version": "1.0.0",
+  "description": "Plataforma de streaming de películas con SASS",
+  "scripts": {
+    "sass": "sass layout/main.scss styles.css",
+    "sass:watch": "sass --watch . --output . --style compressed",
+    "sass:prod": "sass layout/main.scss styles.css --style=compressed"
+  },
+  "keywords": ["sass", "scss", "películas", "streaming"],
+  "author": "",
+  "license": "MIT"
+}

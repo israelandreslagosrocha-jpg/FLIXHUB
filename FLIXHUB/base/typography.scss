@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as v;
+ 
+body {
+  font-family: v.$font-base;
+  color: v.$color-text;
+  background-color: v.$color-bg;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+ 
+h1 {
+  font-family: v.$font-title;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: v.$space-lg;
+  
+  @include responsive('tablet') {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: v.$font-title;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: v.$space-md;
+  
+  @include responsive('tablet') {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-family: v.$font-title;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: v.$space-sm;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+}

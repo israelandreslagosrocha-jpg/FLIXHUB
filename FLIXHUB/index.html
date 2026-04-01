@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixHub - Plataforma de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Segoe+UI:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="l-header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769559660/FLIXHUB_LOGO_jvgnqa.png" alt="FlixHub Logo" class="nav__logo-img">
+            </a>
+            <ul class="nav__menu">
+                <li><a href="#películas" class="nav__link">Películas</a></li>
+                <li><a href="#series" class="nav__link">Series</a></li>
+                <li><a href="#estrenos" class="nav__link">Estrenos</a></li>
+                <li><a href="#contacto" class="nav__link">Contacto</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="btn btn--primary nav__cta">Suscribirse</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/dhgifjpkh/video/upload/v1769559702/FLIXHUB_VIDEO_akfiwi.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__subtitle">Descubre miles de películas y series en un solo lugar. Tu entretenimiento sin límites.</p>
+            <div class="hero__buttons">
+                <button class="btn btn--primary">Ver Películas</button>
+                <button class="btn btn--outline">Conocer Más</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Películas Destacadas -->
+    <section class="section" id="películas">
+        <div class="container">
+            <h2 class="section__title">Películas Destacadas</h2>
+            <p class="section__subtitle">Nuestras mejores selecciones para ti</p>
+            
+            <div class="grid">
+                <!-- Película 1 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558949/aventura_en_el_espacio_nulvrz.png" alt="Aventura en el Espacio" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Aventura en el Espacio</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.8/5</span>
+                        </div>
+                        <p class="card__description">Una épica aventura a través del universo donde nada es imposible.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 2 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558948/corazon_de_acero_ll0boo.png" alt="Corazón de Acero" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Corazón de Acero</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.6/5</span>
+                        </div>
+                        <p class="card__description">Drama emocional que toca el alma. Una historia de amor y redención.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2023</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 3 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558947/ultima_mision_j7ccop.png" alt="La Última Misión" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">La Última Misión</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.9/5</span>
+                        </div>
+                        <p class="card__description">Acción sin parar. Espías, traición y explosiones en cada esquina.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 4 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558949/risas_garantizadas_h5mndu.png" alt="Risas Garantizadas" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Risas Garantizadas</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.5/5</span>
+                        </div>
+                        <p class="card__description">Comedia hilariante que te hará reír toda la noche.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2023</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 5 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558948/suspenso_total_pbhg2p.png" alt="Suspenso Total" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Suspenso Total</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.7/5</span>
+                        </div>
+                        <p class="card__description">Un misterio sin resolver que te mantendrá al borde del asiento.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 6 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558947/mundo_fantastico_br9wmk.png" alt="Mundo Fantástico" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Mundo Fantástico</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.8/5</span>
+                        </div>
+                        <p class="card__description">Magia y fantasía en un mundo completamente nuevo y cautivador.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Populares -->
+    <section class="section" id="series" style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);">
+        <div class="container">
+            <h2 class="section__title">Series Populares</h2>
+            <p class="section__subtitle">Sigue las mejores historias episodio tras episodio</p>
+            
+            <div class="grid">
+                <!-- Serie 1 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558947/justicia_oscura_juulec.png" alt="Justicia Oscura" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Justicia Oscura</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.9/5</span>
+                        </div>
+                        <p class="card__description">5 temporadas de suspenso y intriga. ¿Quién es el verdadero héroe?</p>
+                        <div class="card__footer">
+                            <span class="card__year">2022-2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serie 2 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558947/brooklyn_dreams_vxdf6o.png" alt="Brooklyn Dreams" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Brooklyn Dreams</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.7/5</span>
+                        </div>
+                        <p class="card__description">La vida no es fácil en Nueva York. Tres generaciones de historias.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2021-2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serie 3 -->
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dhgifjpkh/image/upload/v1769558948/the_kingdom_hl0r8o.png" alt="El Reino" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">El Reino</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <span style="margin-left: 0.5rem;">4.6/5</span>
+                        </div>
+                        <p class="card__description">Política, poder y traiciones en la corte. Imprescindible para ver.</p>
+                        <div class="card__footer">
+                            <span class="card__year">2020-2024</span>
+                            <button class="btn btn--primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="l-footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Acerca de</h3>
+                    <p>FlixHub es la plataforma de streaming más completa. Más de 10,000 películas y series disponibles.</p>
+                </div>
+                <div class="footer__section">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="#películas">Películas</a></li>
+                        <li><a href="#series">Series</a></li>
+                        <li><a href="#estrenos">Estrenos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3>Síguenos</h3>
+                    <div class="footer__social">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 FlixHub. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tema claro/oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        
+        // Cargar tema guardado
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+        
+        // Cambiar tema al hacer clic
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+        
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'light') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // Efectos interactivos en cards
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Efecto de luz que sigue el cursor
+                const rotateX = (y - rect.height / 2) / 10;
+                const rotateY = (x - rect.width / 2) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                
+                // Actualizar posición del brillo
+                const beforeElement = card.querySelector('::before');
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+
+            // Efecto de escala al pasar el cursor
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = 'all 0.3s ease';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Efecto de ripple al hacer clic
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.width = '0';
+                ripple.style.height = '0';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.pointerEvents = 'none';
+                ripple.style.animation = 'ripple-animation 0.6s ease-out';
+
+                btn.appendChild(ripple);
+
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Animación CSS para ripple
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes ripple-animation {
+                to {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                    left: calc(-50px);
+                    top: calc(-50px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

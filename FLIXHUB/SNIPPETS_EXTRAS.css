@@ -1,0 +1,404 @@
+/*
+  ═══════════════════════════════════════════════════════════════════
+  FLIXHUB - SNIPPETS Y EXTENSIONES SASS
+  ═══════════════════════════════════════════════════════════════════
+  
+  Este archivo contiene ejemplos y extensiones que puedes añadir a tu proyecto.
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   1. NUEVOS COLORES DISPONIBLES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+$color-primary: #e50914;      // Rojo Netflix
+$color-secondary: #221f1f;    // Negro
+$color-bg: #141414;           // Fondo oscuro
+$color-text: #ffffff;         // Blanco
+$color-accent: #564d4d;       // Gris
+
+// Paletas alternativas:
+$color-blue: #1e40af;         // Azul oscuro
+$color-green: #10b981;        // Verde
+$color-purple: #7c3aed;       // Púrpura
+$color-yellow: #f59e0b;       // Amarillo
+$color-success: #10b981;      // Verde éxito
+$color-danger: #ef4444;       // Rojo peligro
+$color-warning: #f59e0b;      // Naranja warning
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   2. VARIACIONES DE BOTONES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+// En components/buttons.scss, añade:
+
+.btn--ghost {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  
+  &:hover {
+    background: white;
+    color: v.$color-primary;
+  }
+}
+
+.btn--large {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.btn--small {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+}
+
+.btn--block {
+  width: 100%;
+  display: block;
+}
+
+.btn--icon {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   3. VARIACIONES DE CARDS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+// En components/cards.scss, añade:
+
+.card--featured {
+  grid-column: span 2;
+  
+  @include m.responsive('tablet') {
+    grid-column: span 1;
+  }
+}
+
+.card--trending {
+  border: 2px solid v.$color-primary;
+  
+  &::before {
+    content: 'TRENDING';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: v.$color-primary;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 10;
+  }
+}
+
+.card--soon {
+  opacity: 0.6;
+  
+  &::after {
+    content: 'PRÓXIMAMENTE';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: v.$color-primary;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    z-index: 10;
+    font-weight: bold;
+  }
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   4. COMPONENTES ADICIONALES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+// Modal - Añade a components/modals.scss
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  @include m.flex-center;
+  z-index: 1000;
+  
+  &.active {
+    display: flex;
+  }
+  
+  &__content {
+    background: v.$color-secondary;
+    padding: v.$space-lg;
+    border-radius: 8px;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+// Testimonios
+.testimonial {
+  background: v.$color-secondary;
+  padding: v.$space-lg;
+  border-radius: 8px;
+  border-left: 4px solid v.$color-primary;
+  
+  &__text {
+    font-style: italic;
+    margin-bottom: v.$space-md;
+    color: v.$color-accent;
+  }
+  
+  &__author {
+    font-weight: bold;
+    color: white;
+  }
+  
+  &__rating {
+    color: v.$color-primary;
+    margin-bottom: v.$space-sm;
+  }
+}
+
+// Badges
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  &--primary {
+    background: v.$color-primary;
+    color: white;
+  }
+  
+  &--success {
+    background: #10b981;
+    color: white;
+  }
+}
+
+// Alert
+.alert {
+  padding: v.$space-md;
+  border-radius: 8px;
+  margin-bottom: v.$space-lg;
+  
+  &--info {
+    background: #0ea5e9;
+    color: white;
+  }
+  
+  &--warning {
+    background: #f59e0b;
+    color: white;
+  }
+  
+  &--danger {
+    background: #ef4444;
+    color: white;
+  }
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   5. EFECTOS Y ANIMACIONES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+// Añade a abstracts/mixins.scss:
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@mixin animate-fade {
+  animation: fade-in 0.5s ease;
+}
+
+@mixin animate-slide {
+  animation: slide-in 0.5s ease;
+}
+
+// Uso:
+.card {
+  @include animate-fade;
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   6. TEMA CLARO (LIGHT MODE)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+// Para soportar tema claro, añade a variables.scss:
+
+// Dark mode (default)
+$color-bg-dark: #141414;
+$color-text-dark: #ffffff;
+$color-secondary-dark: #221f1f;
+
+// Light mode
+$color-bg-light: #ffffff;
+$color-text-light: #1f2937;
+$color-secondary-light: #f3f4f6;
+
+// En layout/main.scss:
+body {
+  background-color: v.$color-bg-dark;
+  color: v.$color-text-dark;
+  
+  &.light-mode {
+    background-color: v.$color-bg-light;
+    color: v.$color-text-light;
+    
+    .card {
+      background: v.$color-secondary-light;
+    }
+  }
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   7. ESTRUCTURA HTML PARA NUEVOS COMPONENTES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+<!-- Modal -->
+<div class="modal active">
+  <div class="modal__content">
+    <button class="modal__close">&times;</button>
+    <h2>Mi Modal</h2>
+    <p>Contenido aquí...</p>
+  </div>
+</div>
+
+<!-- Testimonial -->
+<div class="testimonial">
+  <div class="testimonial__rating">⭐⭐⭐⭐⭐</div>
+  <p class="testimonial__text">"Excelente plataforma, muy bueno!"</p>
+  <p class="testimonial__author">- Juan Pérez</p>
+</div>
+
+<!-- Badge -->
+<span class="badge badge--primary">Nuevo</span>
+<span class="badge badge--success">Popular</span>
+
+<!-- Alert -->
+<div class="alert alert--info">
+  ℹ️ Esta es información importante
+</div>
+<div class="alert alert--warning">
+  ⚠️ Esto es una advertencia
+</div>
+<div class="alert alert--danger">
+  ❌ Esto es un error
+</div>
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   8. REFERENCIAS Y RECURSOS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+DOCUMENTACIÓN:
+- SASS oficial: https://sass-lang.com/documentation
+- BEM CSS: https://en.bem.info/methodology/
+- SMACSS: https://smacss.com/
+- Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+HERRAMIENTAS:
+- SASS Compiler: https://jsoncrack.com/editor
+- Color picker: https://www.colorpicker.com/
+- Font Pairings: https://www.fontpair.co/
+
+INSPIRACIÓN:
+- Netflix: https://www.netflix.com/
+- Disney+: https://www.disneyplus.com/
+- HBO Max: https://www.hbomax.com/
+
+ICONOS:
+- Font Awesome: https://fontawesome.com/
+- Feather Icons: https://feathericons.com/
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   9. VERSIÓN MINIFICADA PARA PRODUCCIÓN
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+Para generar una versión minificada de estilos.css:
+
+$ sass layout/main.scss styles.min.css --style=compressed
+
+Luego usa en index.html:
+<link rel="stylesheet" href="styles.min.css">
+
+Esto reduce el tamaño del CSS y mejora la velocidad de carga.
+*/
+
+/* ═══════════════════════════════════════════════════════════════════
+   10. CHECKLIST PARA PERSONALIZAR
+   ═══════════════════════════════════════════════════════════════════ */
+
+/*
+☐ Cambiar colores en variables.scss
+☐ Cambiar fuentes en variables.scss
+☐ Cambiar nombre del sitio en index.html
+☐ Cambiar logo en header
+☐ Añadir películas a la sección
+☐ Cambiar imágenes de películas
+☐ Añadir descripción en footer
+☐ Cambiar redes sociales
+☐ Compilar SCSS a CSS
+☐ Probar en móvil, tablet y desktop
+☐ Verificar todos los enlaces funcionan
+☐ Minificar CSS para producción
+*/
+
